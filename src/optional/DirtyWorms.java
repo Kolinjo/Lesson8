@@ -19,6 +19,17 @@ public class DirtyWorms {
 		System.out.println(stuffIFoundInTheYard.size());
 
 		/* TODO: Clean out the dirt but keep the delicious worms. */ 
+		
+		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
+			if (stuffIFoundInTheYard.get(i).getClass().getSimpleName().equals("Dirt")) {
+				stuffIFoundInTheYard.remove(i);
+				System.out.println("Dirt");
+				i--;
+			}else {
+				System.out.println("Worm");
+			}
+			
+		}
 
 		System.out.println(stuffIFoundInTheYard.size());	//should be 2
 
